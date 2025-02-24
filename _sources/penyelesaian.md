@@ -72,7 +72,7 @@ $\begin{bmatrix}
    
    kesimpulan :
 
-   $(x_1 , x_2) = (4 - x_2,x_2) untu semua x_2 sampai R$
+   $(x_1 , x_2) = (4 - x_2,x_2)$ untuk semua $x_2$ sampai $R$
 contoh soal 4
 
 $$

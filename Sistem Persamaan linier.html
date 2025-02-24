@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Welcome to your Jupyter Book &#8212; My sample book</title>
+    <title>Sistem Persamaan linier &#8212; My sample book</title>
   
   
   
@@ -59,10 +59,9 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Sistem Persamaan linier';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Markdown Files" href="markdown.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -145,7 +144,7 @@
     
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
@@ -176,8 +175,8 @@
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     Welcome to your Jupyter Book
                 </a>
             </li>
@@ -257,7 +256,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FSistem Persamaan linier.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -287,7 +286,7 @@
       
       
       
-      <li><a href="_sources/intro.md" target="_blank"
+      <li><a href="_sources/Sistem Persamaan linier.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -358,7 +357,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -369,11 +370,25 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Welcome to your Jupyter Book</h1>
+    <h1>Sistem Persamaan linier</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi-sistem-persamaan-linier">Definisi Sistem Persamaan Linier</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solusi-persamaan-linier">Solusi Persamaan Linier</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminasi">Eliminasi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminasi-gaus">Eliminasi Gaus</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solusi-grafik">Solusi Grafik</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -383,20 +398,124 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-your-jupyter-book">
-<h1>Welcome to your Jupyter Book<a class="headerlink" href="#welcome-to-your-jupyter-book" title="Link to this heading">#</a></h1>
-<p>This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out <a class="reference external" href="https://jupyterbook.org">the Jupyter Book documentation</a> for more information.</p>
-<p>Check out the content pages bundled with this sample book to see more.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+  <section class="tex2jax_ignore mathjax_ignore" id="sistem-persamaan-linier">
+<h1>Sistem Persamaan linier<a class="headerlink" href="#sistem-persamaan-linier" title="Link to this heading">#</a></h1>
+<section id="definisi-sistem-persamaan-linier">
+<h2>Definisi Sistem Persamaan Linier<a class="headerlink" href="#definisi-sistem-persamaan-linier" title="Link to this heading">#</a></h2>
+<p>kumpulan dari dua atau lebih persamaan linier yang melibatkan variabel-variabel yang sama. Tujuan dari sistem persamaan linier adalah untuk menemukan nilai-nilai dari variabel-variabel tersebut yang memenuhi semua persamaan dalam sistem secara bersamaan.</p>
+<p>Definisi Formal
+Secara matematis, sistem persamaan linier dapat ditulis sebagai berikut:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{cases}
+a_{11}x_1 + a_{12}x_2 + \dots + a_{1n}x_n = b_1 \\
+a_{21}x_1 + a_{22}x_2 + \dots + a_{2n}x_n = b_2 \\
+\vdots \\
+a_{m1}x_1 + a_{m2}x_2 + \dots + a_{mn}x_n = b_m
+\end{cases}
+\end{split}\]</div>
+<p>Di mana:</p>
+<ul class="simple">
+<li><p><strong><span class="math notranslate nohighlight">\(x_1,x_2, . . .,x_n\)</span></strong> adalah variabel-variabel yang tidak diketahui (unknowns).</p></li>
+<li><p><strong><span class="math notranslate nohighlight">\(a_{ij}\)</span></strong> adalah koefisien dari variabel X~j~ dalam persamaan ke-i.</p></li>
+<li><p><strong><span class="math notranslate nohighlight">\(b_i\)</span></strong> adalah konstanta dalam persamaan ke-i.</p></li>
+<li><p><strong><span class="math notranslate nohighlight">\(m\)</span></strong> adalah jumlah persamaan.</p></li>
+<li><p><strong><span class="math notranslate nohighlight">\(n\)</span></strong> adalah jumlah variabel.</p></li>
 </ul>
-</div>
+</section>
+<section id="solusi-persamaan-linier">
+<h2>Solusi Persamaan Linier<a class="headerlink" href="#solusi-persamaan-linier" title="Link to this heading">#</a></h2>
+<p>solusi dari sistem persamaan linier dapat ditemukan dengan berbagai metode, di antaranya:</p>
+<section id="eliminasi">
+<h3>Eliminasi<a class="headerlink" href="#eliminasi" title="Link to this heading">#</a></h3>
+<p>Metode eliminasi merupakan salah satu teknik untuk menyelesaikan sistem persamaan linear. Dalam metode ini, persamaan-persamaan tersebut dijumlahkan atau dikurangkan untuk memperoleh persamaan dengan satu variabel. Jika koefisien salah satu variabel sama, dan tanda koefisiennya berlawanan, persamaan dapat dijumlahkan untuk mengeliminasi variabel. Demikian pula, jika koefisien salah satu variabel sama, dan tanda koefisiennya sama, persamaan dapat dikurangkan untuk memperoleh persamaan dengan satu variabel.</p>
+<p>Langkah-Langkah Metode Eliminasi
+Langkah 1: Pertama, kalikan kedua persamaan yang diberikan dengan beberapa konstanta bukan nol yang sesuai untuk membuat koefisien salah satu variabel (baik x maupun y) sama secara numerik.
+Langkah 2:  Setelah itu, tambahkan atau kurangi satu persamaan dari persamaan lainnya sedemikian rupa sehingga satu variabel tereliminasi. Sekarang, jika Anda memperoleh persamaan dalam satu variabel, lanjutkan ke Langkah 3. Jika tidak;</p>
+<p>Jika kita memperoleh pernyataan benar yang tidak menyertakan variabel apa pun, maka pasangan persamaan asli mempunyai solusi tak terhingga banyaknya.
+Jika kita memperoleh pernyataan salah yang tidak menyertakan variabel apa pun, maka pasangan persamaan asli tidak mempunyai solusi, yaitu tidak konsisten.
+Langkah 3: Selesaikan persamaan dalam satu variabel (x atau y) untuk mendapatkan nilainya.
+Langkah 4: Substitusikan nilai ini ke salah satu persamaan yang diberikan untuk mendapatkan nilai variabel lain.</p>
+<p>Contoh :
+Jumlah bilangan dua digit dan bilangan yang diperoleh dengan membalik digitnya adalah 88. Jika digit bilangan tersebut berbeda 2, carilah bilangan tersebut. Berapa banyak bilangan tersebut?</p>
+<p>Larutan:</p>
+<p>Biarkan angka puluhan dan angka satuan pada bilangan pertama masing-masing adalah x dan y.</p>
+<p>Jadi, angka pertama = 10x + y</p>
+<p>Setelah angka-angka tersebut dibalik, angka kedua akan menjadi = x + 10y</p>
+<p>Sesuai dengan pernyataan yang diberikan;</p>
+<p>(10x + y) + (10y + x) = 88</p>
+<p>11x + 11y = 88</p>
+<p>11(x+y) = 88</p>
+<p>Tentukan nilai x+y=8 ……….(1)</p>
+<p>Diberikan pula, selisih antara kedua angka tersebut sama dengan 2. Oleh karena itu;</p>
+<p>Tentukan x-y = 2 ………..(2)</p>
+<p>atau</p>
+<p>Persamaan y-x = 2 …………(3)</p>
+<p>Jika kita perhatikan persamaan 1 dan 2, maka dengan metode eliminasi kita peroleh,</p>
+<p>x = 5 dan y = 3</p>
+<p>Jadi, jumlahnya adalah 53.</p>
+<p>Jika kita perhatikan persamaan 1 dan 3, maka dengan metode eliminasi kita peroleh,</p>
+<p>x = 3 dan y = 5</p>
+<p>Jadi, jumlahnya adalah 35.</p>
+<p>Jadi, ada dua angka tersebut, 53 dan 35.</p>
+</section>
+<section id="eliminasi-gaus">
+<h3>Eliminasi Gaus<a class="headerlink" href="#eliminasi-gaus" title="Link to this heading">#</a></h3>
+<p>Eliminasi Gauss adalah metode yang digunakan untuk menyederhanakan sistem persamaan linier ke dalam bentuk eselon baris. Langkah-langkahnya adalah:</p>
+<ol class="arabic simple">
+<li><p>Susun sistem persamaan dalam bentuk matriks augmented.</p></li>
+<li><p>Gunakan operasi baris elementer untuk mengubah matriks ke bentuk eselon baris.</p></li>
+<li><p>Dari bentuk eselon baris, gunakan substitusi balik untuk menemukan nilai variabel.</p></li>
+</ol>
+<p>contoh:</p>
+<p><span class="math notranslate nohighlight">\(\begin{bmatrix} 
+1 &amp; 1 &amp; | 5 \\ 
+4 &amp; -1 &amp; | 1
+\end{bmatrix}\)</span></p>
+<ol class="arabic">
+<li><p>kita bisa membagi baris pertama dengan 2: <span class="math notranslate nohighlight">\(R_1 \rightarrow \frac{R_1}{2}\)</span>:</p>
+<p><span class="math notranslate nohighlight">\(\begin{bmatrix} 
+1 &amp; 0.5 &amp; | 2.5 \\ 
+4 &amp; -1 &amp; | 1
+\end{bmatrix}\)</span></p>
+</li>
+<li><p>untuk baris 2, kurangkan 4 x R~1~ dari R~2~:
+<span class="math notranslate nohighlight">\(\begin{bmatrix} 
+1 &amp; 0.5 &amp; | 2.5 \\ 
+0 &amp; -3 &amp; | -9
+\end{bmatrix}\)</span></p></li>
+<li><p>substitusi mundur (black subtitution) sekarang kita selesaikan sistem dari bawah ke atas</p>
+<p>1.persamaan 2
+<span class="math notranslate nohighlight">\(-3y = -9\)</span>
+<span class="math notranslate nohighlight">\(y = \frac {-9}{-3} =3\)</span>
+2.persamaan 1
+<span class="math notranslate nohighlight">\(x + 0.5y = 2.5\)</span>
+substitusi <span class="math notranslate nohighlight">\(y = 3\)</span>
+<span class="math notranslate nohighlight">\(x + 0.5(3) = 2.5\)</span>
+<span class="math notranslate nohighlight">\(x + 1.5 = 2.5\)</span>
+<span class="math notranslate nohighlight">\(x = 2.5 - 1.5 = 1\)</span>
+Sehingga diperoleh <strong><span class="math notranslate nohighlight">\(x = 1\)</span> dan <span class="math notranslate nohighlight">\(y = 3\)</span></strong></p>
+</li>
+</ol>
+</section>
+<section id="solusi-grafik">
+<h3>Solusi Grafik<a class="headerlink" href="#solusi-grafik" title="Link to this heading">#</a></h3>
+<p>metode ini menyelesaikan masalah dengan menentukan titik perpotongan du garis lurus yang merupakan tampilan dari kedua persamaan linier dua variabel.
+berikut adalah langkah-lagkah penyelesaian SPLDV dengan metode grafik:</p>
+<ol class="arabic simple">
+<li><p>tentukan titik potong salah satu persamaan linier dengan sumbu X atau sumbu Y.</p></li>
+<li><p>hubungkan kedua titik potong dengan menggunakan garis lurus.</p></li>
+<li><p>lakukan langkah 1 dan 2 untuk persamaan lain pada SPLDV.</p></li>
+<li><p>jika kedua titik berpotongan di (x,y) = (x1, y1), penyelesaian SPLDV adalah x=x1 dan y=y1.</p></li>
+<li><p>jika kedua tidak berpotongan, SPLDV tidak memiliki penyelesaian.</p></li>
+</ol>
+<p><span class="math notranslate nohighlight">\(\begin{cases}
+4x + 5y = 40\\
+x + 2y = 14
+\end{cases}\)</span></p>
+<iframe scrolling="no" title="Graphing Assignment Feb 23, 2025" src="https://www.geogebra.org/material/iframe/id/begbedhq/width/526/height/682/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="526px" height="682px" style="border:0px;"> </iframe>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -429,21 +548,33 @@ It does not go in-depth into any particular topic - check out <a class="referenc
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="right-next"
-       href="markdown.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Markdown Files</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi-sistem-persamaan-linier">Definisi Sistem Persamaan Linier</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solusi-persamaan-linier">Solusi Persamaan Linier</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminasi">Eliminasi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminasi-gaus">Eliminasi Gaus</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solusi-grafik">Solusi Grafik</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

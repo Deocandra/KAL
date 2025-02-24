@@ -2,6 +2,7 @@
 ### operasi baris elementer
 ### eliminasi gaus
 contoh soal 1
+
 $$
 \begin{array}{cc}
 x_1+2x_2+3x_3&=6\\
@@ -25,6 +26,7 @@ penyelesaian
    \end{bmatrix}$
 
 contoh soal 2
+
 $$
 \begin{array}{cc}
 x_1+x_2+x_3&=3\\
@@ -34,6 +36,7 @@ x_1+2x_2&=3
 $$
 
 contoh soal 3
+
 $$
 \begin{array}{cc}
 2x_1+2x_2&=4\\
@@ -65,6 +68,7 @@ $\begin{bmatrix}
    $x_1 = 4 - x_2$
    
 contoh soal 4
+
 $$
 \begin{array}{cc}
 x_1+x_2&=5\\

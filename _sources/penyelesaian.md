@@ -10,6 +10,7 @@ x_1+2x_2+3x_3&=6\\
 x_3-x_2&=2
 \end{array}
 $$
+
 penyelesaian 
 
  $\begin{bmatrix} 
@@ -43,6 +44,7 @@ $$
 x_1+x_2&=2
 \end{array}
 $$
+
  penyelesaian 
  
  $\begin{bmatrix} 
@@ -75,6 +77,7 @@ x_1+x_2&=5\\
 x_1+x_3&=6
 \end{array}
 $$
+
 penyelesaian
 
 $\begin{bmatrix} 

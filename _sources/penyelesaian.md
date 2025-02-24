@@ -67,8 +67,12 @@ $\begin{bmatrix}
    \end{bmatrix}$
    
    nyatakan $x_2$ sebagai variabel bebas:
+
    $x_1 = 4 - x_2$
    
+   kesimpulan :
+
+   $(x_1 , x_2) = (4 - x_2,x_2) untu semua x_2 sampai R$
 contoh soal 4
 
 $$

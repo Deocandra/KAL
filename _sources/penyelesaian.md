@@ -1,6 +1,11 @@
 ## penyelesaian sistem persamaan linier persaman linier
 ### operasi baris elementer
 ### eliminasi gaus
+Eliminasi Gauss adalah metode yang digunakan untuk menyederhanakan sistem persamaan linier ke dalam bentuk eselon baris. Langkah-langkahnya adalah:
+1. Susun sistem persamaan dalam bentuk matriks augmented.
+2. Gunakan operasi baris elementer untuk mengubah matriks ke bentuk eselon baris.
+3. Dari bentuk eselon baris, gunakan substitusi balik untuk menemukan nilai variabel.
+
 contoh soal 1
 
 $$

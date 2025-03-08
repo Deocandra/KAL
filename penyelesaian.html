@@ -62,6 +62,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'penyelesaian';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Matrik" href="MATRIKS.html" />
     <link rel="prev" title="Sistem Persamaan linier" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -182,6 +183,9 @@
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">penyelesaian sistem persamaan linier persaman linier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MATRIKS.html">Matrik</a></li>
+
+
 </ul>
 
     </div>
@@ -412,18 +416,59 @@ x_1+2x_2+3x_3&amp;=6\\
 x_3-x_2&amp;=2
 \end{array}
 \end{split}\]</div>
-<p>penyelesaian</p>
+<p>penyelesaian:</p>
+<p><strong>Langkah 1: Represemtasi Matriks Augented</strong> kita ubah persamaan ini menjadi bentuk matriks augmented:</p>
 <p><span class="math notranslate nohighlight">\(\begin{bmatrix} 
    1 &amp; 2 &amp; 3 &amp; | 6 \\ 
     2 &amp; 4 &amp; 6 &amp; | 12\\
    0 &amp; 1 &amp; 1 &amp; | 2
    \end{bmatrix}\)</span></p>
-<p>baris pertama kali -2 lalu kurangi baris kedua dengan hasil tersebut
-<span class="math notranslate nohighlight">\(\begin{bmatrix} 
+<p><strong>Langkah 2: Eliminasi Baris</strong>
+<strong>Eliminasi Elemen di Kolom Pertama</strong></p>
+<ul class="simple">
+<li><p>Kita ingin membuat elemen di bawah elemen utama (pivot) pertama menjadi nol.</p></li>
+<li><p>Baris kedua dikurangi 2 kali baris pertama:</p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(4R_2 = R_2 - 2R_1\)</span></p>
+<p><span class="math notranslate nohighlight">\(\begin{bmatrix} 
    1 &amp; 2 &amp; 3 &amp; | 6 \\ 
     0 &amp; 0 &amp; 0 &amp; | 0\\
    0 &amp; 1 &amp; 1 &amp; | 2
    \end{bmatrix}\)</span></p>
+<p>Karena baris kedua menjadi nol sepenuhnya, ini menunjukkan bahwa <strong>baris tersebut tidak memberikan informasi tambahan</strong>, sehingga kita bisa mengabaikannya.</p>
+<p><strong>Langkah 3: Ubah ke Bentuk Eselon Baris</strong>
+Matriks yang tersisa:</p>
+<p><span class="math notranslate nohighlight">\(\begin{bmatrix}
+1 &amp; 2 &amp; 3 &amp; | 6 \\
+0 &amp; 1 &amp; 1 &amp; | 2
+\end{bmatrix}\)</span></p>
+<p>Kita sudah memiliki bentuk eselon baris.</p>
+<p><strong>Langkah 4: Substitusi Balik</strong>
+Dari baris kedua:</p>
+<p><span class="math notranslate nohighlight">\(x_2 + x_3 = 2\)</span></p>
+<p><span class="math notranslate nohighlight">\(x_2 = 2 - x_3\)</span></p>
+<p>Dari baris pertama:</p>
+<p><span class="math notranslate nohighlight">\(x_1 + 2x_2 + 3x_3 = 6\)</span></p>
+<p>Substitusi <span class="math notranslate nohighlight">\(( x_2 = 2 - x_3 )\)</span>:</p>
+<p><span class="math notranslate nohighlight">\(x_1 + 2(2 - x_3) + 3x_3 = 6\)</span></p>
+<p><span class="math notranslate nohighlight">\(x_1 + 4 - 2x_3 + 3x_3 = 6\)</span></p>
+<p><span class="math notranslate nohighlight">\(x_1 + 4 + x_3 = 6\)</span></p>
+<p><span class="math notranslate nohighlight">\(x_1 = 2 - x_3\)</span></p>
+<p><strong>Hasil Akhir</strong>
+Solusi dalam bentuk parametrik:</p>
+<p><span class="math notranslate nohighlight">\(\begin{aligned}
+x_1 &amp;= 2 - x_3 \\
+x_2 &amp;= 2 - x_3 \\
+x_3 &amp;= x_3
+\end{aligned}\)</span></p>
+<p>Karena ada satu variabel bebas <span class="math notranslate nohighlight">\(( x_3 )\)</span>, maka sistem ini memiliki <strong>tak hingga banyak solusi</strong>.</p>
+<p>Jika ingin solusi spesifik, kita bisa memilih nilai <span class="math notranslate nohighlight">\(( x_3 )\)</span>, misalnya:</p>
+<ul class="simple">
+<li><p>Jika <span class="math notranslate nohighlight">\(( x_3 = 0 )\)</span> → <span class="math notranslate nohighlight">\(( (x_1, x_2, x_3) = (2,2,0) )\)</span>.</p></li>
+<li><p>Jika <span class="math notranslate nohighlight">\(( x_3 = 1 )\)</span> → <span class="math notranslate nohighlight">\(( (x_1, x_2, x_3) = (1,1,1) )\)</span>.</p></li>
+<li><p>Jika <span class="math notranslate nohighlight">\(( x_3 = 2 )\)</span> → <span class="math notranslate nohighlight">\(( (x_1, x_2, x_3) = (0,0,2) )\)</span>.</p></li>
+</ul>
+<hr class="docutils" />
 <p>contoh soal 2</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -433,6 +478,52 @@ x_1+x_2+x_3&amp;=3\\
 x_1+2x_2&amp;=3
 \end{array}
 \end{split}\]</div>
+<p>penyelesaian:</p>
+<p><strong>Langkah 1: Representasi Matriks Augmented</strong>
+Kita ubah sistem persamaan ke dalam bentuk matriks augmented:</p>
+<p><span class="math notranslate nohighlight">\(\begin{bmatrix}
+1 &amp; 1 &amp; 1 &amp; | 3 \\
+2 &amp; 0 &amp; 2 &amp; | 5 \\
+1 &amp; 2 &amp; 0 &amp; | 3
+\end{bmatrix}\)</span></p>
+<p><strong>Langkah 2: Eliminasi Elemen di Bawah Pivot Pertama</strong>
+Kita buat elemen di bawah elemen utama (pivot) pertama menjadi nol dengan operasi baris:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(( R_2 = R_2 - 2R_1 )\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(( R_3 = R_3 - R_1 )\)</span></p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(\begin{bmatrix}
+1 &amp; 1 &amp; 1 &amp; | 3 \\
+0 &amp; -2 &amp; 0 &amp; | -1 \\
+0 &amp; 1 &amp; -1 &amp; | 0
+\end{bmatrix}\)</span></p>
+<p><strong>Langkah 3: Eliminasi Elemen di Bawah Pivot Kedua</strong>
+Sekarang kita eliminasi elemen di bawah pivot kedua (<span class="math notranslate nohighlight">\(( -2 )\)</span>) untuk mendapatkan bentuk eselon:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(( R_3 = R_3 + \frac{1}{2} R_2 )\)</span></p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(\begin{bmatrix}
+1 &amp; 1 &amp; 1 &amp; | 3 \\
+0 &amp; -2 &amp; 0 &amp; | -1 \\
+0 &amp; 0 &amp; -1 &amp; | -\frac{1}{2}
+\end{bmatrix}\)</span></p>
+<p><strong>Langkah 4: Substitusi Balik</strong>
+Dari baris ketiga:</p>
+<p><span class="math notranslate nohighlight">\(- x_3 = -\frac{1}{2}\)</span></p>
+<p><span class="math notranslate nohighlight">\(x_3 = \frac{1}{2}\)</span></p>
+<p>Dari baris kedua:</p>
+<p><span class="math notranslate nohighlight">\(-2x_2 = -1\)</span></p>
+<p><span class="math notranslate nohighlight">\(x_2 = \frac{1}{2}\)</span></p>
+<p>Dari baris pertama:</p>
+<p><span class="math notranslate nohighlight">\(x_1 + x_2 + x_3 = 3\)</span></p>
+<p><span class="math notranslate nohighlight">\(x_1 + \frac{1}{2} + \frac{1}{2} = 3\)</span></p>
+<p><span class="math notranslate nohighlight">\(x_1 + 1 = 3\)</span></p>
+<p><span class="math notranslate nohighlight">\(x_1 = 2\)</span></p>
+<p><strong>Hasil Akhir</strong>
+Solusi unik dari sistem ini adalah:</p>
+<p><span class="math notranslate nohighlight">\((x_1, x_2, x_3) = (2, \frac{1}{2}, \frac{1}{2})\)</span></p>
+<p>Jadi, sistem ini memiliki <strong>solusi tunggal</strong> yaitu <strong><span class="math notranslate nohighlight">\(( x_1 = 2 \), \( x_2 = \frac{1}{2} \), \( x_3 = \frac{1}{2} )\)</span></strong>.</p>
+<hr class="docutils" />
 <p>contoh soal 3</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -441,26 +532,45 @@ x_1+2x_2&amp;=3
 x_1+x_2&amp;=2
 \end{array}
 \end{split}\]</div>
-<p>penyelesaian</p>
+<p>penyelesaian:</p>
+<p><strong>Langkah 1: Representasi Matriks Augmented</strong>
+Kita ubah sistem persamaan ini menjadi bentuk matriks augmented:</p>
 <p><span class="math notranslate nohighlight">\(\begin{bmatrix} 
    2 &amp; 2 &amp; | 4 \\ 
     1&amp; 1 &amp; | 2
    \end{bmatrix}\)</span></p>
-<p>kalikan baris kedua dengan 2</p>
+<p><strong>Langkah 2: Normalisasi Pivot (Bentuk Eselon Baris)</strong>
+Kita buat elemen pivot kedua menjadi 2 dengan mengalikan baris kedua dengan 2:</p>
 <p><span class="math notranslate nohighlight">\(\begin{bmatrix} 
    2 &amp; 2 &amp; | 4 \\ 
     2&amp; 2 &amp; | 4
    \end{bmatrix}\)</span></p>
-<p>baris kedua dikurangi baris ke 1</p>
+<p>Selanjutnya, kita eliminasi elemen di bawah pivot dengan <span class="math notranslate nohighlight">\(( R_2 = R_2 - R_1 )\)</span>:</p>
 <p><span class="math notranslate nohighlight">\(\begin{bmatrix} 
    2 &amp; 2 &amp; | 4 \\ 
     0&amp; 0 &amp; | 0
    \end{bmatrix}\)</span></p>
-<p>nyatakan <span class="math notranslate nohighlight">\(x_2\)</span> sebagai variabel bebas:</p>
+<p><strong>Langkah 3: Substitusi Balik</strong>
+Dari baris pertama:</p>
 <p><span class="math notranslate nohighlight">\(x_1 = 4 - x_2\)</span></p>
-<p>kesimpulan :</p>
-<p><span class="math notranslate nohighlight">\((x_1 , x_2) = (4 - x_2,x_2)\)</span> untuk semua <span class="math notranslate nohighlight">\(x_2\)</span> sampai <span class="math notranslate nohighlight">\(R\)</span>
-contoh soal 4</p>
+<p>Dari baris kedua, kita lihat bahwa <span class="math notranslate nohighlight">\(( 0 = 0 )\)</span>, yang selalu benar, sehingga baris ini tidak memberikan informasi tambahan.</p>
+<p>Maka, sistem memiliki <strong>tak hingga banyak solusi</strong>, tergantung pada nilai variabel bebas <span class="math notranslate nohighlight">\(( x_2 )\)</span>:</p>
+<p><span class="math notranslate nohighlight">\(\begin{aligned}
+x_1 &amp;= 4 - x_2 \\
+x_2 &amp;= x_2
+\end{aligned}\)</span></p>
+<p><strong>Hasil Akhir</strong>
+Solusi dalam bentuk parametrik:</p>
+<p><span class="math notranslate nohighlight">\((x_1, x_2) = (4 - x_2, x_2)\)</span></p>
+<p>Misalnya:</p>
+<ul class="simple">
+<li><p>Jika <span class="math notranslate nohighlight">\(( x_2 = 0 )\)</span>, maka <span class="math notranslate nohighlight">\(( (x_1, x_2) = (4, 0) )\)</span>.</p></li>
+<li><p>Jika <span class="math notranslate nohighlight">\(( x_2 = 1 )\)</span>, maka <span class="math notranslate nohighlight">\(( (x_1, x_2) = (2, 2) )\)</span>.</p></li>
+<li><p>Jika <span class="math notranslate nohighlight">\(( x_2 = 2 )\)</span>, maka <span class="math notranslate nohighlight">\(( (x_1, x_2) = (0, 4) )\)</span>.</p></li>
+</ul>
+<p>Sistem ini memiliki <strong>tak hingga banyak solusi</strong> karena kedua persamaan sebenarnya identik.</p>
+<hr class="docutils" />
+<p>contoh soal 4</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{array}{cc}
@@ -468,11 +578,30 @@ x_1+x_2&amp;=5\\
 x_1+x_3&amp;=6
 \end{array}
 \end{split}\]</div>
-<p>penyelesaian</p>
+<p>penyelesaian:</p>
+<p><strong>Langkah 1: Representasi Matriks Augmented</strong>
+Kita ubah sistem persamaan menjadi bentuk matriks augmented:</p>
 <p><span class="math notranslate nohighlight">\(\begin{bmatrix} 
    1 &amp; 1 &amp; 0&amp; | 4 \\ 
     1&amp; 0 &amp; 1&amp;| 0
    \end{bmatrix}\)</span></p>
+<p><strong>Langkah 2: Eliminasi Baris</strong>
+Kita eliminasi elemen di bawah pivot pertama. Caranya, kurangkan baris kedua dengan baris pertama:</p>
+<p><span class="math notranslate nohighlight">\(R_2 = R_2 - R_1\)</span></p>
+<p><span class="math notranslate nohighlight">\(\begin{bmatrix}
+1 &amp; 1 &amp; | 5 \\
+0 &amp; 1 &amp; | 1
+\end{bmatrix}\)</span></p>
+<p><strong>Langkah 3: Substitusi Balik</strong>
+Dari baris kedua:</p>
+<p><span class="math notranslate nohighlight">\(x_2 = 1\)</span></p>
+<p>Substitusi <span class="math notranslate nohighlight">\(( x_2 = 1 )\)</span> ke dalam baris pertama:</p>
+<p><span class="math notranslate nohighlight">\(x_1 + 1 = 5\)</span></p>
+<p><span class="math notranslate nohighlight">\(x_1 = 4\)</span></p>
+<p><strong>Hasil Akhir</strong>
+Solusi unik:</p>
+<p><span class="math notranslate nohighlight">\((x_1, x_2) = (4, 1)\)</span></p>
+<p>Jadi, sistem ini memiliki <strong>solusi tunggal</strong> yaitu <strong><span class="math notranslate nohighlight">\(( x_1 = 4 )\)</span>, <span class="math notranslate nohighlight">\(( x_2 = 1 )\)</span></strong>.</p>
 </section>
 </section>
 
@@ -514,6 +643,15 @@ x_1+x_3&amp;=6
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title">Sistem Persamaan linier</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="MATRIKS.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Matrik</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>

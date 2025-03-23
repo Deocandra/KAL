@@ -187,7 +187,6 @@
 
 
 
-
 </ul>
 
     </div>
@@ -398,13 +397,17 @@ document.write(`
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian-skalar-dengan-matriks">Perkalian skalar dengan matriks</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sistem-persamaan-liear-dengan-menggunakan-invers-menggunakan-obe-operasi-baris-elementer">sistem persamaan liear dengan menggunakan invers menggunakan obe (operasi baris elementer)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#determinan-matrik">DETERMINAN MATRIK</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#minor-matrik">MINOR MATRIK</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cofaktor-matrik">COFAKTOR MATRIK</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-determinan-dengan-konsep-minor-dan-cofaktor-matrik-berikan-contoh-matrik-3x3-4x4-dan-5x5">MENCARI DETERMINAN DENGAN KONSEP MINOR DAN COFAKTOR MATRIK. BERIKAN CONTOH MATRIK 3X3 4X4 DAN 5X5</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#determinan-matriks">DETERMINAN MATRIKS</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#minor-matriks">Minor Matriks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cofaktor-matriks">Cofaktor Matriks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-determinan-dengan-konsep-minor-dan-cofactor-matrik-contoh-matriks-3x3-4x4-dan-5x5">Mencari determinan dengan konsep Minor dan Cofactor Matrik. contoh matriks 3x3, 4x4, dan 5x5</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-3x3">contoh 3x3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-4x4">contoh 4x4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-5x5">contoh 5x5</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#minggu-depan-shearscrean">MINGGU depan shearscrean</a></li>
+</ul>
+</li>
 </ul>
 
             </nav>
@@ -719,20 +722,228 @@ Kita kalikan <span class="math notranslate nohighlight">\(( A^{-1} )\)</span> de
 <p>Sehingga diperoleh:</p>
 <p><span class="math notranslate nohighlight">\(x_1 = -3, \quad x_2 = 5, \quad x_3 = 2\)</span></p>
 </section>
-<section id="determinan-matrik">
-<h1>DETERMINAN MATRIK<a class="headerlink" href="#determinan-matrik" title="Link to this heading">#</a></h1>
-<section id="minor-matrik">
-<h2>MINOR MATRIK<a class="headerlink" href="#minor-matrik" title="Link to this heading">#</a></h2>
+<section id="determinan-matriks">
+<h1>DETERMINAN MATRIKS<a class="headerlink" href="#determinan-matriks" title="Link to this heading">#</a></h1>
+<p>Determinan adalah nilai skalar yang dihitung dari elemen-elemen suatu matriks persegi. Menyediakan informasi penting tentang sifat-sifat matriks, seperti apakah matriks memiliki invers atau tidak. Determinan adalah fungsi yang mengaitkan suatu matriks persegi 𝐴 dengan sebuah bilangan real (skalar).</p>
+<p>Sifat-Sifat Determinan
+Sifat Penting Determinan</p>
+<ol class="arabic simple">
+<li><p>Determinan Matriks Identitas:det(𝐼)=1, di mana 𝐼 adalah matriks identitas.</p></li>
+<li><p>Baris atau Kolom Nol:Jika ada baris atau kolom yang semuanya nol, maka det(𝐴)=0.</p></li>
+<li><p>Pertukaran Baris/Kolom:Jika dua baris atau kolom dipertukarkan, determinan berubah tanda.</p></li>
+<li><p>Kelipatan Baris/Kolom:Jika satu baris atau kolom dikalikan dengan skalar 𝑘, maka determinan menjadi 𝑘⋅det(𝐴).</p></li>
+<li><p>Matriks Singular:Jika det(𝐴)=0, maka matriks 𝐴 disebut singular (tidak memiliki invers).</p></li>
+</ol>
+<section id="minor-matriks">
+<h2>Minor Matriks<a class="headerlink" href="#minor-matriks" title="Link to this heading">#</a></h2>
+<p>Minor: Nilai determinan submatriks yang diperoleh dengan menghapus baris dan kolom tertentu dari matriks.
+Definisi:
+Minor elemen <span class="math notranslate nohighlight">\(𝑎_{𝑖𝑗}\)</span> adalah determinan submatriks yang diperoleh dengan menghapus baris ke-𝑖 dan kolom ke-𝑗 dari matriks asli.
+Contoh:
+Diberikan matriks:
+𝐴= <span class="math notranslate nohighlight">\(\begin{bmatrix} 
+   1 &amp; 2 &amp; 3 \\ 
+    4 &amp; 5 &amp; 6\\
+    7 &amp; 8 &amp; 9
+   \end{bmatrix}\)</span></p>
+<p>Minor dari elemen 𝑎_11 adalah:
+<span class="math notranslate nohighlight">\(𝑀_{11}\)</span>=det <span class="math notranslate nohighlight">\(\begin{bmatrix} 
+   5 &amp; 6 \\ 
+    8 &amp; 9
+   \end{bmatrix}\)</span>
+=(5⋅9)−(6⋅8)=45−48=−3</p>
 </section>
-<section id="cofaktor-matrik">
-<h2>COFAKTOR MATRIK<a class="headerlink" href="#cofaktor-matrik" title="Link to this heading">#</a></h2>
+<section id="cofaktor-matriks">
+<h2>Cofaktor Matriks<a class="headerlink" href="#cofaktor-matriks" title="Link to this heading">#</a></h2>
+<p>Cofactor: Hasil perkalian minor dengan faktor tanda <span class="math notranslate nohighlight">\((−1)^{𝑖+𝑗}\)</span>, di mana 𝑖 adalah indeks baris dan 𝑗 adalah indeks kolom.
+Definisi:
+Cofactor elemen <span class="math notranslate nohighlight">\(𝑎_{𝑖𝑗}\)</span> adalah hasil perkalian minor <span class="math notranslate nohighlight">\(𝑀_{𝑖𝑗}\)</span> dengan faktor tanda <span class="math notranslate nohighlight">\((−1)^{𝑖+𝑗}\)</span>.
+<span class="math notranslate nohighlight">\(𝐶_{𝑖𝑗}=(−1)^{𝑖+𝑗}⋅𝑀_{𝑖𝑗}\)</span>
+Contoh:
+Menggunakan matriks yang sama:
+𝐴=<span class="math notranslate nohighlight">\(\begin{bmatrix} 
+   1 &amp; 2 &amp; 3 \\ 
+    4 &amp; 5 &amp; 6\\
+    7 &amp; 8 &amp; 9
+   \end{bmatrix}\)</span>
+Cofactor dari elemen <span class="math notranslate nohighlight">\(𝑎_{11}\)</span> adalah:
+<span class="math notranslate nohighlight">\(𝐶_{11}=(−1)^{1+1}⋅𝑀_{11}=1⋅(−3)=−3\)</span></p>
+<p>Peran Minor dan Cofactor dalam Determinan
+Determinan matriks dapat dihitung menggunakan ekspansi kofaktor (Laplace Expansion):
+det(𝐴)<span class="math notranslate nohighlight">\(=∑_{𝑗=1}^𝑛 𝑎_{𝑖𝑗} ⋅𝐶_{𝑖𝑗}\)</span>
+atau  det(𝐴<span class="math notranslate nohighlight">\(=∑_{𝑖=1}^𝑛 𝑎_{𝑖𝑗} ⋅𝐶_{𝑖𝑗}\)</span></p>
 </section>
-<section id="mencari-determinan-dengan-konsep-minor-dan-cofaktor-matrik-berikan-contoh-matrik-3x3-4x4-dan-5x5">
-<h2>MENCARI DETERMINAN DENGAN KONSEP MINOR DAN COFAKTOR MATRIK. BERIKAN CONTOH MATRIK 3X3 4X4 DAN 5X5<a class="headerlink" href="#mencari-determinan-dengan-konsep-minor-dan-cofaktor-matrik-berikan-contoh-matrik-3x3-4x4-dan-5x5" title="Link to this heading">#</a></h2>
+<section id="mencari-determinan-dengan-konsep-minor-dan-cofactor-matrik-contoh-matriks-3x3-4x4-dan-5x5">
+<h2>Mencari determinan dengan konsep Minor dan Cofactor Matrik. contoh matriks 3x3, 4x4, dan 5x5<a class="headerlink" href="#mencari-determinan-dengan-konsep-minor-dan-cofactor-matrik-contoh-matriks-3x3-4x4-dan-5x5" title="Link to this heading">#</a></h2>
+<section id="contoh-3x3">
+<h3>contoh 3x3<a class="headerlink" href="#contoh-3x3" title="Link to this heading">#</a></h3>
+<p>B=<span class="math notranslate nohighlight">\(\begin{bmatrix} 
+   2 &amp; -1 &amp; 3 \\ 
+    0 &amp; 4 &amp; 1\\
+    -2 &amp; 5 &amp; 6
+   \end{bmatrix}\)</span></p>
+<p>kita akan engunakan baris pertaman untuk ekspansi. baris pertama dari matriks B:
+(2 -1 3)
+menghitung minor dan cofaktor untuk setiap elemen pada baris pertama
+elemen <span class="math notranslate nohighlight">\(b_{11}\)</span> = 2
+minor <span class="math notranslate nohighlight">\(M_{11}\)</span>
+<span class="math notranslate nohighlight">\(M_{11}\)</span> = <span class="math notranslate nohighlight">\(\begin{bmatrix} 
+       4 &amp; 1 \\ 
+        5 &amp; 6
+       \end{bmatrix}\)</span> =( 4 x 6 ) - ( 1 x 5 ) = 24 - 5 = 19</p>
+<p>cofaktor <span class="math notranslate nohighlight">\(C_{11}\)</span>
+<span class="math notranslate nohighlight">\(C_{11}= (-1)^{1+1}\)</span> x <span class="math notranslate nohighlight">\(M_{11}\)</span> = 1 x 19 = 19</p>
+<p>elemen <span class="math notranslate nohighlight">\(b_{12}\)</span> = -1
+minor <span class="math notranslate nohighlight">\(M_{12}\)</span>
+<span class="math notranslate nohighlight">\(M_{12}\)</span> = <span class="math notranslate nohighlight">\(\begin{bmatrix} 
+       0 &amp; 1 \\ 
+        -2 &amp; 6
+       \end{bmatrix}\)</span> =( 0 x 6 ) - ( 1 x -2 )=0 + 2 = 2</p>
+<p>cofaktor <span class="math notranslate nohighlight">\(C_{12}\)</span>
+<span class="math notranslate nohighlight">\(C_{12}= (-1)^{1+2}\)</span> x <span class="math notranslate nohighlight">\(M_{12}\)</span> = -1 x 2 = -2</p>
+<p>elemen <span class="math notranslate nohighlight">\(b_{13}\)</span> = 3
+minor <span class="math notranslate nohighlight">\(M_{13}\)</span>
+<span class="math notranslate nohighlight">\(M_{13}\)</span> = <span class="math notranslate nohighlight">\(\begin{bmatrix} 
+       0 &amp; 4 \\ 
+        -2 &amp; 5
+       \end{bmatrix}\)</span> =( 0 x 5 ) - ( 4 x -2 )= 0 + 8 = 8</p>
+<p>cofaktor <span class="math notranslate nohighlight">\(C_{13}\)</span>
+<span class="math notranslate nohighlight">\(C_{13}= (-1)^{1+3}\)</span> x <span class="math notranslate nohighlight">\(M_{13}\)</span> = 1 x 8 = 8</p>
+<p>determinan matriks B
+det(B)= <span class="math notranslate nohighlight">\(b_{11}\)</span> x <span class="math notranslate nohighlight">\(C_{11}\)</span> + <span class="math notranslate nohighlight">\(b_{12}\)</span> x <span class="math notranslate nohighlight">\(C_{12}\)</span> + <span class="math notranslate nohighlight">\(b_{13}\)</span> x <span class="math notranslate nohighlight">\(C_{13}\)</span></p>
+<p>subtitusi nilai-nilai yang telah dihitung:
+det(b)= 2 x 19 + (-1) x (-2) + 3 x 8 = 38 + 2 + 24 = 64
+maka det(b) = 64</p>
+</section>
+<section id="contoh-4x4">
+<h3>contoh 4x4<a class="headerlink" href="#contoh-4x4" title="Link to this heading">#</a></h3>
+<p>Misalkan kita memiliki matriks ( C ) berukuran 4x4 sebagai berikut:</p>
+<p>C = <span class="math notranslate nohighlight">\(\begin{bmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 \\
+0 &amp; 1 &amp; 2 &amp; 3 \\
+1 &amp; 0 &amp; 1 &amp; 2 \\
+2 &amp; 1 &amp; 0 &amp; 1
+\end{bmatrix}\)</span></p>
+<p>Kita akan menggunakan baris pertama untuk ekspansi. Baris pertama dari matriks ( C ) adalah:</p>
+<p>(1 &amp; 2 &amp; 3 &amp; 4)</p>
+<p>Hitung Minor dan Kofaktor untuk Setiap Elemen pada Baris Pertama</p>
+<p>Elemen  <span class="math notranslate nohighlight">\(c_{11}\)</span> = 1
+Minor ( <span class="math notranslate nohighlight">\(M_{11}\)</span> )</p>
+<p><span class="math notranslate nohighlight">\(M_{11}\)</span> = <span class="math notranslate nohighlight">\(\begin{bmatrix}
+1 &amp; 2 &amp; 3 \\
+0 &amp; 1 &amp; 2 \\
+1 &amp; 0 &amp; 1
+\end{bmatrix}\)</span></p>
+<p>Kofaktor ( <span class="math notranslate nohighlight">\(C_{11}\)</span> )adalah:</p>
+<p><span class="math notranslate nohighlight">\(C_{11}\)</span> = <span class="math notranslate nohighlight">\((-1)^{1+1}\)</span> x <span class="math notranslate nohighlight">\(M_{11}\)</span> = 1 x 2 = 2</p>
+<p>Elemen  <span class="math notranslate nohighlight">\(c_{12}\)</span> = 2
+Minor ( <span class="math notranslate nohighlight">\(M_{12}\)</span> )</p>
+<p><span class="math notranslate nohighlight">\(M_{12}\)</span> = <span class="math notranslate nohighlight">\(\begin{bmatrix}
+0 &amp; 2 &amp; 3 \\
+1 &amp; 1 &amp; 2 \\
+2 &amp; 0 &amp; 1
+\end{bmatrix}\)</span></p>
+<p>Kofaktor ( <span class="math notranslate nohighlight">\(C_{12}\)</span>) adalah:</p>
+<p><span class="math notranslate nohighlight">\(C_{12}\)</span> = <span class="math notranslate nohighlight">\((-1)^{1+2}\)</span> x <span class="math notranslate nohighlight">\(M_{12}\)</span> = -1 x 0 = 0</p>
+<p>Elemen ( <span class="math notranslate nohighlight">\(c_{13}\)</span> = 3 )
+Minor ( <span class="math notranslate nohighlight">\(M_{13}\)</span> )</p>
+<p><span class="math notranslate nohighlight">\(M_{13}\)</span> = <span class="math notranslate nohighlight">\(\begin{bmatrix}
+0 &amp; 1 &amp; 3 \\
+1 &amp; 0 &amp; 2 \\
+2 &amp; 1 &amp; 1
+\end{bmatrix}\)</span></p>
+<p>Kofaktor ( <span class="math notranslate nohighlight">\(C_{13}\)</span>) adalah:</p>
+<p><span class="math notranslate nohighlight">\(C_{13}\)</span> = <span class="math notranslate nohighlight">\((-1)^{1+3}\)</span> x <span class="math notranslate nohighlight">\(M_{13}\)</span> = 1 x 6 = 6</p>
+<p>Elemen ( <span class="math notranslate nohighlight">\(c_{14}\)</span> = 4 )
+Minor ( M_{14} )</p>
+<p><span class="math notranslate nohighlight">\(M_{14}\)</span> = <span class="math notranslate nohighlight">\(\begin{bmatrix}
+0 &amp; 1 &amp; 2 \\
+1 &amp; 0 &amp; 1 \\
+2 &amp; 1 &amp; 0
+\end{bmatrix}\)</span></p>
+<p>Kofaktor ( <span class="math notranslate nohighlight">\(C_{14}\)</span> ) adalah:</p>
+<p><span class="math notranslate nohighlight">\(C_{14}\)</span> = <span class="math notranslate nohighlight">\((-1)^{1+4}\)</span> x <span class="math notranslate nohighlight">\(M_{14}\)</span> = -1 x 4 = -4</p>
+<p>Hitung Determinan Matriks( C )</p>
+<p><span class="math notranslate nohighlight">\({det}(C)\)</span> = <span class="math notranslate nohighlight">\(c_{11}\)</span> x <span class="math notranslate nohighlight">\(C_{11}\)</span> + <span class="math notranslate nohighlight">\(c_{12}\)</span> x <span class="math notranslate nohighlight">\(C_{12}\)</span> + <span class="math notranslate nohighlight">\(c_{13}\)</span> x <span class="math notranslate nohighlight">\(C_{13}\)</span> + <span class="math notranslate nohighlight">\(c_{14}\)</span> x <span class="math notranslate nohighlight">\(C_{14}\)</span></p>
+<p>Substitusi nilai-nilai yang telah dihitung:</p>
+<p><span class="math notranslate nohighlight">\({det}(C)\)</span> = 1 x 2 + 2 x 0 + 3 x 6 + 4 x (-4) = 2 + 0 + 18 - 16 = 4</p>
+<p>Determinan matriks ( C ) adalah:</p>
+<p><span class="math notranslate nohighlight">\({det}(C)\)</span> = 4</p>
+<p>Jadi, determinan matriks ( C ) adalah 4.</p>
+</section>
+<section id="contoh-5x5">
+<h3>contoh 5x5<a class="headerlink" href="#contoh-5x5" title="Link to this heading">#</a></h3>
+<p>Misalkan kita memiliki matriks ( D ) berukuran 5x5 sebagai berikut:</p>
+<p>D = <span class="math notranslate nohighlight">\(\begin{bmatrix}
+2 &amp; 0 &amp; 1 &amp; 3 &amp; 4 \\
+1 &amp; 2 &amp; 0 &amp; 1 &amp; 2 \\
+0 &amp; 1 &amp; 2 &amp; 0 &amp; 1 \\
+3 &amp; 0 &amp; 1 &amp; 2 &amp; 0 \\
+1 &amp; 2 &amp; 3 &amp; 0 &amp; 1
+\end{bmatrix}\)</span></p>
+<p>Kita akan menggunakan baris pertama untuk ekspansi. Baris pertama dari matriks ( D ) adalah:</p>
+<p>(2 &amp; 0 &amp; 1 &amp; 3 &amp; 4)</p>
+<p>Hitung Minor dan Kofaktor untuk Setiap Elemen pada Baris Pertama</p>
+<p>Elemen <span class="math notranslate nohighlight">\(( d_{11} = 2 )\)</span>
+Minor (<span class="math notranslate nohighlight">\(M_{11}\)</span> )</p>
+<p><span class="math notranslate nohighlight">\(M_{11}\)</span> = <span class="math notranslate nohighlight">\(\begin{bmatrix}
+2 &amp; 0 &amp; 1 &amp; 2 \\
+1 &amp; 2 &amp; 0 &amp; 1 \\
+0 &amp; 1 &amp; 2 &amp; 0 \\
+2 &amp; 3 &amp; 0 &amp; 1
+\end{bmatrix}\)</span></p>
+<p>Kofaktor ( <span class="math notranslate nohighlight">\(C_{11}\)</span> ) adalah:</p>
+<p><span class="math notranslate nohighlight">\(C_{11}\)</span> = <span class="math notranslate nohighlight">\((-1)^{1+1}\)</span> x <span class="math notranslate nohighlight">\(M_{11}\)</span> = 1 x 5 = 5</p>
+<p>Elemen ( <span class="math notranslate nohighlight">\(d_{12}\)</span> = 0 )
+Minor ( <span class="math notranslate nohighlight">\(M_{12}\)</span> )</p>
+<p><span class="math notranslate nohighlight">\(M_{12}\)</span> = <span class="math notranslate nohighlight">\(\begin{bmatrix}
+1 &amp; 0 &amp; 1 &amp; 2 \\
+0 &amp; 2 &amp; 0 &amp; 1 \\
+3 &amp; 1 &amp; 2 &amp; 0 \\
+1 &amp; 3 &amp; 0 &amp; 1
+\end{bmatrix}\)</span></p>
+<p>Kofaktor ( <span class="math notranslate nohighlight">\(C_{12}\)</span> ) adalah:</p>
+<p><span class="math notranslate nohighlight">\(C_{12}\)</span> = <span class="math notranslate nohighlight">\((-1)^{1+2}\)</span> x <span class="math notranslate nohighlight">\(M_{12}\)</span> = -1 x (-3) = 3</p>
+<p>Elemen ( <span class="math notranslate nohighlight">\(d_{13}\)</span> = 1 )
+Minor ( <span class="math notranslate nohighlight">\(M_{13}\)</span> )</p>
+<p><span class="math notranslate nohighlight">\(M_{13}\)</span> = <span class="math notranslate nohighlight">\(\begin{bmatrix}
+1 &amp; 2 &amp; 1 &amp; 2 \\
+0 &amp; 1 &amp; 0 &amp; 1 \\
+3 &amp; 0 &amp; 2 &amp; 0 \\
+1 &amp; 2 &amp; 0 &amp; 1
+\end{bmatrix}\)</span></p>
+<p>Kofaktor ( <span class="math notranslate nohighlight">\(C_{13}\)</span> ) adalah:</p>
+<p><span class="math notranslate nohighlight">\(C_{13}\)</span> = <span class="math notranslate nohighlight">\((-1)^{1+3}\)</span> x <span class="math notranslate nohighlight">\(M_{13}\)</span> = 1 x 4 = 4</p>
+<p>Elemen ( <span class="math notranslate nohighlight">\(d_{14}\)</span> = 3 )
+Minor ( <span class="math notranslate nohighlight">\(M_{14}\)</span> )</p>
+<p><span class="math notranslate nohighlight">\(M_{14}\)</span> = <span class="math notranslate nohighlight">\(\begin{bmatrix}
+1 &amp; 2 &amp; 0 &amp; 2 \\
+0 &amp; 1 &amp; 2 &amp; 1 \\
+3 &amp; 0 &amp; 1 &amp; 0 \\
+1 &amp; 2 &amp; 3 &amp; 1
+\end{bmatrix}\)</span></p>
+<p>Kofaktor ( <span class="math notranslate nohighlight">\(C_{14}\)</span> ) adalah:</p>
+<p><span class="math notranslate nohighlight">\(C_{14}\)</span> = <span class="math notranslate nohighlight">\((-1)^{1+4}\)</span> x <span class="math notranslate nohighlight">\(M_{14}\)</span> = -1 x (-2) = 2</p>
+<p>Elemen ( <span class="math notranslate nohighlight">\(d_{15}\)</span> = 4 )
+Minor ( <span class="math notranslate nohighlight">\(M_{15}\)</span> )</p>
+<p><span class="math notranslate nohighlight">\(M_{15}\)</span> = <span class="math notranslate nohighlight">\(\begin{bmatrix}
+1 &amp; 2 &amp; 0 &amp; 1 \\
+0 &amp; 1 &amp; 2 &amp; 0 \\
+3 &amp; 0 &amp; 1 &amp; 2 \\
+1 &amp; 2 &amp; 3 &amp; 0
+\end{bmatrix}\)</span></p>
+<p>Kofaktor ( C_{15} ) adalah:</p>
+<p><span class="math notranslate nohighlight">\(C_{15}\)</span> = <span class="math notranslate nohighlight">\((-1)^{1+5}\)</span> x <span class="math notranslate nohighlight">\(M_{15}\)</span> = 1 x 1 = 1</p>
+<p>Hitung Determinan Matriks ( D )</p>
+<p><span class="math notranslate nohighlight">\({det}(D)\)</span> = <span class="math notranslate nohighlight">\(d_{11}\)</span> x <span class="math notranslate nohighlight">\(C_{11}\)</span> +<span class="math notranslate nohighlight">\(d_{12}\)</span> x <span class="math notranslate nohighlight">\(C_{12}\)</span> + <span class="math notranslate nohighlight">\(d_{13}\)</span> x <span class="math notranslate nohighlight">\(C_{13}\)</span> + <span class="math notranslate nohighlight">\(d_{14}\)</span> x <span class="math notranslate nohighlight">\(C_{14}\)</span> + <span class="math notranslate nohighlight">\(d_{15}\)</span> x <span class="math notranslate nohighlight">\(C_{15}\)</span></p>
+<p>Substitusi nilai-nilai yang telah dihitung:</p>
+<p><span class="math notranslate nohighlight">\({det}(D)\)</span> = 2 x 5 + 0 x 3 + 1 x 4 + 3 x 2 + 4 x 1 = 10 + 0 + 4 + 6 + 4 = 24</p>
+<p>Kesimpulan
+Determinan matriks ( D ) adalah:</p>
+<p><span class="math notranslate nohighlight">\({det}(D)\)</span> = 24</p>
+<p>Jadi, determinan matriks ( D ) adalah 24.</p>
 </section>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="minggu-depan-shearscrean">
-<h1>MINGGU depan shearscrean<a class="headerlink" href="#minggu-depan-shearscrean" title="Link to this heading">#</a></h1>
 </section>
 
     <script type="text/x-thebe-config">
@@ -805,13 +1016,17 @@ Kita kalikan <span class="math notranslate nohighlight">\(( A^{-1} )\)</span> de
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian-skalar-dengan-matriks">Perkalian skalar dengan matriks</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sistem-persamaan-liear-dengan-menggunakan-invers-menggunakan-obe-operasi-baris-elementer">sistem persamaan liear dengan menggunakan invers menggunakan obe (operasi baris elementer)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#determinan-matrik">DETERMINAN MATRIK</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#minor-matrik">MINOR MATRIK</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cofaktor-matrik">COFAKTOR MATRIK</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-determinan-dengan-konsep-minor-dan-cofaktor-matrik-berikan-contoh-matrik-3x3-4x4-dan-5x5">MENCARI DETERMINAN DENGAN KONSEP MINOR DAN COFAKTOR MATRIK. BERIKAN CONTOH MATRIK 3X3 4X4 DAN 5X5</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#determinan-matriks">DETERMINAN MATRIKS</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#minor-matriks">Minor Matriks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cofaktor-matriks">Cofaktor Matriks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-determinan-dengan-konsep-minor-dan-cofactor-matrik-contoh-matriks-3x3-4x4-dan-5x5">Mencari determinan dengan konsep Minor dan Cofactor Matrik. contoh matriks 3x3, 4x4, dan 5x5</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-3x3">contoh 3x3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-4x4">contoh 4x4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-5x5">contoh 5x5</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#minggu-depan-shearscrean">MINGGU depan shearscrean</a></li>
+</ul>
+</li>
 </ul>
 
   </nav></div>

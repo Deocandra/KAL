@@ -25,7 +25,7 @@ $$
 
 Di mana:
 - **$x_1,x_2, . . .,x_n$** adalah variabel-variabel yang tidak diketahui (unknowns).
-- **$a_{ij}$** adalah koefisien dari variabel X~j~ dalam persamaan ke-i.
+- **$a_{ij}$** adalah koefisien dari variabel $X_j$ dalam persamaan ke-i.
 - **$b_i$** adalah konstanta dalam persamaan ke-i.
 - **$m$** adalah jumlah persamaan.
 - **$n$** adalah jumlah variabel.
@@ -108,7 +108,7 @@ $\begin{bmatrix}
    4 & -1 & | 1
    \end{bmatrix}$
    
-2. untuk baris 2, kurangkan 4 x R~1~ dari R~2~:
+2. untuk baris 2, kurangkan 4 x $R_1$ dari $R_2$:
     $\begin{bmatrix} 
    1 & 0.5 & | 2.5 \\ 
    0 & -3 & | -9

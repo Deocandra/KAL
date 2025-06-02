@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Sistem Persamaan linier &#8212; deo</title>
+    <title>Perkalian Titik (Dot Product) dan Vektor Satuan &#8212; deo</title>
   
   
   
@@ -59,10 +59,10 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'titik';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="penyelesaian sistem persamaan linier persaman linier" href="penyelesaian.html" />
+    <link rel="prev" title="Eigenvalue dan Eigenvector" href="kal.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -125,8 +125,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -145,7 +143,7 @@
     
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
@@ -176,13 +174,13 @@
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     Sistem Persamaan linier
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="penyelesaian.html">penyelesaian sistem persamaan linier persaman linier</a></li>
 <li class="toctree-l1"><a class="reference internal" href="MATRIKS.html">Matrik</a></li>
 
@@ -197,7 +195,7 @@
 
 <li class="toctree-l1"><a class="reference internal" href="kal.html">Eigenvalue dan Eigenvector</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="titik.html">Perkalian Titik (Dot Product) dan Vektor Satuan</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Perkalian Titik (Dot Product) dan Vektor Satuan</a></li>
 </ul>
 
     </div>
@@ -269,7 +267,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftitik.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -299,7 +297,7 @@
       
       
       
-      <li><a href="_sources/intro.md" target="_blank"
+      <li><a href="_sources/titik.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -309,7 +307,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -383,7 +381,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Sistem Persamaan linier</h1>
+    <h1>Perkalian Titik (Dot Product) dan Vektor Satuan</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -393,11 +391,17 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi-sistem-persamaan-linier">Definisi Sistem Persamaan Linier</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solusi-persamaan-linier">Solusi Persamaan Linier</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminasi">Eliminasi</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminasi-gaus">Eliminasi Gaus</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solusi-grafik">Solusi Grafik</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian-titik-dot-product">1. Perkalian Titik (Dot Product)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-materi-singkat">a. Materi Singkat</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-program-python">b. Program Python</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vektor-satuan">2. Vektor Satuan</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">a. Materi Singkat</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh">Contoh</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">b. Program Python</a></li>
 </ul>
 </li>
 </ul>
@@ -411,126 +415,128 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="sistem-persamaan-linier">
-<h1>Sistem Persamaan linier<a class="headerlink" href="#sistem-persamaan-linier" title="Link to this heading">#</a></h1>
-<section id="definisi-sistem-persamaan-linier">
-<h2>Definisi Sistem Persamaan Linier<a class="headerlink" href="#definisi-sistem-persamaan-linier" title="Link to this heading">#</a></h2>
-<p>kumpulan dari dua atau lebih persamaan linier yang melibatkan variabel-variabel yang sama. Tujuan dari sistem persamaan linier adalah untuk menemukan nilai-nilai dari variabel-variabel tersebut yang memenuhi semua persamaan dalam sistem secara bersamaan.</p>
-<p>Definisi Formal
-Secara matematis, sistem persamaan linier dapat ditulis sebagai berikut:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{cases}
-a_{11}x_1 + a_{12}x_2 + \dots + a_{1n}x_n = b_1 \\
-a_{21}x_1 + a_{22}x_2 + \dots + a_{2n}x_n = b_2 \\
-\vdots \\
-a_{m1}x_1 + a_{m2}x_2 + \dots + a_{mn}x_n = b_m
-\end{cases}
-\end{split}\]</div>
-<p>Di mana:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="perkalian-titik-dot-product-dan-vektor-satuan">
+<h1>Perkalian Titik (Dot Product) dan Vektor Satuan<a class="headerlink" href="#perkalian-titik-dot-product-dan-vektor-satuan" title="Link to this heading">#</a></h1>
+<section id="perkalian-titik-dot-product">
+<h2>1. Perkalian Titik (Dot Product)<a class="headerlink" href="#perkalian-titik-dot-product" title="Link to this heading">#</a></h2>
+<section id="a-materi-singkat">
+<h3>a. Materi Singkat<a class="headerlink" href="#a-materi-singkat" title="Link to this heading">#</a></h3>
+<p>Perkalian titik adalah operasi antara dua vektor yang menghasilkan <strong>skalar</strong> (bukan vektor).</p>
+<p>Untuk dua vektor:</p>
+<p><span class="math notranslate nohighlight">\(
+\vec{A} = (a_1, a_2, ..., a_n), \quad \vec{B} = (b_1, b_2, ..., b_n)
+\)</span></p>
+<p>Maka:</p>
+<p><span class="math notranslate nohighlight">\(
+\vec{A} \cdot \vec{B} = a_1 \cdot b_1 + a_2 \cdot b_2 + \ldots + a_n \cdot b_n
+\)</span></p>
+<p>Atau secara geometris:</p>
+<p><span class="math notranslate nohighlight">\(
+\vec{A} \cdot \vec{B} = |\vec{A}| \cdot |\vec{B}| \cdot \cos(\theta)
+\)</span></p>
+<p>di mana <span class="math notranslate nohighlight">\( \theta \)</span> adalah sudut antara kedua vektor.</p>
+<hr class="docutils" />
+<p>Kegunaan:</p>
 <ul class="simple">
-<li><p><strong><span class="math notranslate nohighlight">\(x_1,x_2, . . .,x_n\)</span></strong> adalah variabel-variabel yang tidak diketahui (unknowns).</p></li>
-<li><p><strong><span class="math notranslate nohighlight">\(a_{ij}\)</span></strong> adalah koefisien dari variabel <span class="math notranslate nohighlight">\(X_j\)</span> dalam persamaan ke-i.</p></li>
-<li><p><strong><span class="math notranslate nohighlight">\(b_i\)</span></strong> adalah konstanta dalam persamaan ke-i.</p></li>
-<li><p><strong><span class="math notranslate nohighlight">\(m\)</span></strong> adalah jumlah persamaan.</p></li>
-<li><p><strong><span class="math notranslate nohighlight">\(n\)</span></strong> adalah jumlah variabel.</p></li>
+<li><p>Menentukan sudut antar vektor.</p></li>
+<li><p>Mengetahui apakah dua vektor saling tegak lurus (hasil dot product = 0 berarti tegak lurus).</p></li>
+</ul>
+<p>Misal:</p>
+<p><span class="math notranslate nohighlight">\(\vec{A}\)</span> = [2, -3]</p>
+<p><span class="math notranslate nohighlight">\(\vec{B}\)</span> = [5, 6]</p>
+<p>Maka:</p>
+<p><span class="math notranslate nohighlight">\(\vec{A}\)</span> · <span class="math notranslate nohighlight">\(\vec{B}\)</span> = (2 × 5) + (-3 × 6) = 10 - 18 = -8</p>
+</section>
+<section id="b-program-python">
+<h3>b. Program Python<a class="headerlink" href="#b-program-python" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dot_product</span><span class="p">(</span><span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">v1</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">v2</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Vektor harus memiliki dimensi yang sama.&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="n">b</span> <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="p">))</span>
+
+<span class="c1"># Contoh vektor</span>
+<span class="n">v1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">v2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+
+<span class="n">hasil</span> <span class="o">=</span> <span class="n">dot_product</span><span class="p">(</span><span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Dot product dari </span><span class="si">{</span><span class="n">v1</span><span class="si">}</span><span class="s2"> dan </span><span class="si">{</span><span class="n">v2</span><span class="si">}</span><span class="s2"> adalah: </span><span class="si">{</span><span class="n">hasil</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dot product dari [2, -3] dan [5, 6] adalah: -8
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="vektor-satuan">
+<h2>2. Vektor Satuan<a class="headerlink" href="#vektor-satuan" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h3>a. Materi Singkat<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p><strong>Vektor satuan</strong> adalah vektor yang memiliki panjang (magnitudo) <strong>1</strong>, tetapi tetap menunjuk ke arah tertentu.</p>
+<p>Untuk mengubah sebuah vektor <span class="math notranslate nohighlight">\( \vec{V} \)</span> menjadi vektor satuan, gunakan rumus:</p>
+<p><span class="math notranslate nohighlight">\(
+\hat{V} = \frac{\vec{V}}{|\vec{V}|}
+\)</span></p>
+<p>di mana:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\( \vec{V} = (v_1, v_2, ..., v_n) \)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(|\vec{V}| \)</span> adalah panjang (magnitudo) dari vektor <span class="math notranslate nohighlight">\( \vec{V} \)</span>, dihitung dengan:</p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(
+|\vec{V}| = \sqrt{v_1^2 + v_2^2 + \ldots + v_n^2}
+\)</span></p>
+<ul class="simple">
+<li><p>Vektor satuan memiliki <strong>arah yang sama</strong> dengan vektor asal, tetapi panjangnya selalu <strong>1</strong>.</p></li>
+<li><p>Jika panjang (magnitudo) vektor adalah 0, maka <strong>tidak dapat dibuat vektor satuan</strong>, karena akan terjadi pembagian dengan nol.</p></li>
 </ul>
 </section>
-<section id="solusi-persamaan-linier">
-<h2>Solusi Persamaan Linier<a class="headerlink" href="#solusi-persamaan-linier" title="Link to this heading">#</a></h2>
-<p>solusi dari sistem persamaan linier dapat ditemukan dengan berbagai metode, di antaranya:</p>
-<section id="eliminasi">
-<h3>Eliminasi<a class="headerlink" href="#eliminasi" title="Link to this heading">#</a></h3>
-<p>Metode eliminasi merupakan salah satu teknik untuk menyelesaikan sistem persamaan linear. Dalam metode ini, persamaan-persamaan tersebut dijumlahkan atau dikurangkan untuk memperoleh persamaan dengan satu variabel. Jika koefisien salah satu variabel sama, dan tanda koefisiennya berlawanan, persamaan dapat dijumlahkan untuk mengeliminasi variabel. Demikian pula, jika koefisien salah satu variabel sama, dan tanda koefisiennya sama, persamaan dapat dikurangkan untuk memperoleh persamaan dengan satu variabel.</p>
-<p>Langkah-Langkah Metode Eliminasi
-Langkah 1: Pertama, kalikan kedua persamaan yang diberikan dengan beberapa konstanta bukan nol yang sesuai untuk membuat koefisien salah satu variabel (baik x maupun y) sama secara numerik.
-Langkah 2:  Setelah itu, tambahkan atau kurangi satu persamaan dari persamaan lainnya sedemikian rupa sehingga satu variabel tereliminasi. Sekarang, jika Anda memperoleh persamaan dalam satu variabel, lanjutkan ke Langkah 3. Jika tidak;</p>
-<p>Jika kita memperoleh pernyataan benar yang tidak menyertakan variabel apa pun, maka pasangan persamaan asli mempunyai solusi tak terhingga banyaknya.
-Jika kita memperoleh pernyataan salah yang tidak menyertakan variabel apa pun, maka pasangan persamaan asli tidak mempunyai solusi, yaitu tidak konsisten.
-Langkah 3: Selesaikan persamaan dalam satu variabel (x atau y) untuk mendapatkan nilainya.
-Langkah 4: Substitusikan nilai ini ke salah satu persamaan yang diberikan untuk mendapatkan nilai variabel lain.</p>
-<p>Contoh :
-Jumlah bilangan dua digit dan bilangan yang diperoleh dengan membalik digitnya adalah 88. Jika digit bilangan tersebut berbeda 2, carilah bilangan tersebut. Berapa banyak bilangan tersebut?</p>
-<p>Larutan:</p>
-<p>Biarkan angka puluhan dan angka satuan pada bilangan pertama masing-masing adalah x dan y.</p>
-<p>Jadi, angka pertama = 10x + y</p>
-<p>Setelah angka-angka tersebut dibalik, angka kedua akan menjadi = x + 10y</p>
-<p>Sesuai dengan pernyataan yang diberikan;</p>
-<p>(10x + y) + (10y + x) = 88</p>
-<p>11x + 11y = 88</p>
-<p>11(x+y) = 88</p>
-<p>Tentukan nilai x+y=8 ……….(1)</p>
-<p>Diberikan pula, selisih antara kedua angka tersebut sama dengan 2. Oleh karena itu;</p>
-<p>Tentukan x-y = 2 ………..(2)</p>
-<p>atau</p>
-<p>Persamaan y-x = 2 …………(3)</p>
-<p>Jika kita perhatikan persamaan 1 dan 2, maka dengan metode eliminasi kita peroleh,</p>
-<p>x = 5 dan y = 3</p>
-<p>Jadi, jumlahnya adalah 53.</p>
-<p>Jika kita perhatikan persamaan 1 dan 3, maka dengan metode eliminasi kita peroleh,</p>
-<p>x = 3 dan y = 5</p>
-<p>Jadi, jumlahnya adalah 35.</p>
-<p>Jadi, ada dua angka tersebut, 53 dan 35.</p>
 </section>
-<section id="eliminasi-gaus">
-<h3>Eliminasi Gaus<a class="headerlink" href="#eliminasi-gaus" title="Link to this heading">#</a></h3>
-<p>Eliminasi Gauss adalah metode yang digunakan untuk menyederhanakan sistem persamaan linier ke dalam bentuk eselon baris. Langkah-langkahnya adalah:</p>
-<ol class="arabic simple">
-<li><p>Susun sistem persamaan dalam bentuk matriks augmented.</p></li>
-<li><p>Gunakan operasi baris elementer untuk mengubah matriks ke bentuk eselon baris.</p></li>
-<li><p>Dari bentuk eselon baris, gunakan substitusi balik untuk menemukan nilai variabel.</p></li>
-</ol>
-<p>contoh:</p>
-<p><span class="math notranslate nohighlight">\(\begin{bmatrix} 
-1 &amp; 1 &amp; | 5 \\ 
-4 &amp; -1 &amp; | 1
-\end{bmatrix}\)</span></p>
-<ol class="arabic">
-<li><p>kita bisa membagi baris pertama dengan 2: <span class="math notranslate nohighlight">\(R_1 \rightarrow \frac{R_1}{2}\)</span>:</p>
-<p><span class="math notranslate nohighlight">\(\begin{bmatrix} 
-1 &amp; 0.5 &amp; | 2.5 \\ 
-4 &amp; -1 &amp; | 1
-\end{bmatrix}\)</span></p>
-</li>
-<li><p>untuk baris 2, kurangkan 4 x <span class="math notranslate nohighlight">\(R_1\)</span> dari <span class="math notranslate nohighlight">\(R_2\)</span>:
-<span class="math notranslate nohighlight">\(\begin{bmatrix} 
-1 &amp; 0.5 &amp; | 2.5 \\ 
-0 &amp; -3 &amp; | -9
-\end{bmatrix}\)</span></p></li>
-<li><p>substitusi mundur (black subtitution) sekarang kita selesaikan sistem dari bawah ke atas</p>
-<p>1.persamaan 2
-<span class="math notranslate nohighlight">\(-3y = -9\)</span>
-<span class="math notranslate nohighlight">\(y = \frac {-9}{-3} =3\)</span>
-2.persamaan 1
-<span class="math notranslate nohighlight">\(x + 0.5y = 2.5\)</span>
-substitusi <span class="math notranslate nohighlight">\(y = 3\)</span>
-<span class="math notranslate nohighlight">\(x + 0.5(3) = 2.5\)</span>
-<span class="math notranslate nohighlight">\(x + 1.5 = 2.5\)</span>
-<span class="math notranslate nohighlight">\(x = 2.5 - 1.5 = 1\)</span>
-Sehingga diperoleh <strong><span class="math notranslate nohighlight">\(x = 1\)</span> dan <span class="math notranslate nohighlight">\(y = 3\)</span></strong></p>
-</li>
-</ol>
-</section>
-<section id="solusi-grafik">
-<h3>Solusi Grafik<a class="headerlink" href="#solusi-grafik" title="Link to this heading">#</a></h3>
-<p>metode ini menyelesaikan masalah dengan menentukan titik perpotongan du garis lurus yang merupakan tampilan dari kedua persamaan linier dua variabel.
-berikut adalah langkah-lagkah penyelesaian SPLDV dengan metode grafik:</p>
-<ol class="arabic simple">
-<li><p>tentukan titik potong salah satu persamaan linier dengan sumbu X atau sumbu Y.</p></li>
-<li><p>hubungkan kedua titik potong dengan menggunakan garis lurus.</p></li>
-<li><p>lakukan langkah 1 dan 2 untuk persamaan lain pada SPLDV.</p></li>
-<li><p>jika kedua titik berpotongan di (x,y) = (x1, y1), penyelesaian SPLDV adalah x=x1 dan y=y1.</p></li>
-<li><p>jika kedua tidak berpotongan, SPLDV tidak memiliki penyelesaian.</p></li>
-</ol>
-<p><span class="math notranslate nohighlight">\(\begin{cases}
-4x + 5y = 40\\
-x + 2y = 14
-\end{cases}\)</span></p>
-<iframe scrolling="no" title="Graphing Assignment Feb 23, 2025" src="https://www.geogebra.org/material/iframe/id/begbedhq/width/526/height/682/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="526px" height="682px" style="border:0px;"> </iframe>
-</section>
-</section>
-<div class="toctree-wrapper compound">
+<hr class="docutils" />
+<section id="contoh">
+<h2>Contoh<a class="headerlink" href="#contoh" title="Link to this heading">#</a></h2>
+<p>Jika <span class="math notranslate nohighlight">\( \vec{V} = (2, 3) \)</span>, maka:</p>
+<p><span class="math notranslate nohighlight">\(
+|\vec{V}| = \sqrt{2^2 + 3^2} = \sqrt{13}
+\)</span></p>
+<p><span class="math notranslate nohighlight">\(
+\hat{V} = \left( \frac{2}{\sqrt{13}}, \frac{3}{\sqrt{13}} \right)
+\)</span></p>
+<p>Untuk mengubah vektor V = [2, 3] menjadi vektor satuan:</p>
+<p><span class="math notranslate nohighlight">\(|\vec{V}|\)</span> = √(2² + 3²) = √13 ≈ 3.60555</p>
+<p>Vektor satuannya:</p>
+<p>V̂ = [2 / √13, 3 / √13] ≈ [0.5547, 0.8321]</p>
+<section id="id2">
+<h3>b. Program Python<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+
+<span class="k">def</span> <span class="nf">unit_vector</span><span class="p">(</span><span class="n">v</span><span class="p">):</span>
+    <span class="n">magnitude</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">a</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">v</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">magnitude</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Vektor nol tidak bisa dibuat vektor satuan.&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">a</span> <span class="o">/</span> <span class="n">magnitude</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">v</span><span class="p">]</span>  <span class="c1"># dibulatkan 4 desimal</span>
+
+<span class="c1"># Contoh vektor</span>
+<span class="n">v</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">unit_v</span> <span class="o">=</span> <span class="n">unit_vector</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Vektor satuan dari </span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s2"> adalah: </span><span class="si">{</span><span class="n">unit_v</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Vektor satuan dari [2, 3] adalah: [0.5547, 0.8321]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -563,14 +569,14 @@ x + 2y = 14
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="right-next"
-       href="penyelesaian.html"
-       title="next page">
+    <a class="left-prev"
+       href="kal.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">penyelesaian sistem persamaan linier persaman linier</p>
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Eigenvalue dan Eigenvector</p>
       </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -588,11 +594,17 @@ x + 2y = 14
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi-sistem-persamaan-linier">Definisi Sistem Persamaan Linier</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solusi-persamaan-linier">Solusi Persamaan Linier</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminasi">Eliminasi</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminasi-gaus">Eliminasi Gaus</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solusi-grafik">Solusi Grafik</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian-titik-dot-product">1. Perkalian Titik (Dot Product)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-materi-singkat">a. Materi Singkat</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-program-python">b. Program Python</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vektor-satuan">2. Vektor Satuan</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">a. Materi Singkat</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh">Contoh</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">b. Program Python</a></li>
 </ul>
 </li>
 </ul>
